@@ -1,0 +1,23 @@
+{
+  "name": "QQ-music-Demo",
+  "version": "1.0.0",
+  "description": "QQ Music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ba5sx1a0sen1/qq-music-demo.git"
+  },
+  "keywords": [],
+  "author": {
+    "name":"CaiYusen",
+    "email":"cai_ys@qq.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ba5sx1a0sen1/qq-music-demo/issues"
+  },
+  "homepage": "https://github.com/Ba5sx1a0sen1/qq-music-demo#readme"
+}
