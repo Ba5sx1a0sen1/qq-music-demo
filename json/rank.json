@@ -1,0 +1,249 @@
+{
+    "code": 0,
+    "subcode": 0,
+    "message": "",
+    "default": 0,
+    "data": {
+        "topList": [{
+            "id": 4,
+            "listenCount": 19600000,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_4_300_217530992.jpg",
+            "songList": [{
+                "singername": "张杰",
+                "songname": "无药可救"
+            }, {
+                "singername": "鹿晗",
+                "songname": "时间停了"
+            }, {
+                "singername": "张杰",
+                "songname": "做梦"
+            }],
+            "topTitle": "巅峰榜·流行指数",
+            "type": 0
+        }, {
+            "id": 26,
+            "listenCount": 19800000,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_26_300_214734117.jpg",
+            "songList": [{
+                "singername": "李荣浩",
+                "songname": "年少有为"
+            }, {
+                "singername": "Christine welch",
+                "songname": "一百万个可能"
+            }, {
+                "singername": "숀 (SHAUN)",
+                "songname": "Way Back Home"
+            }],
+            "topTitle": "巅峰榜·热歌",
+            "type": 0
+        }, {
+            "id": 27,
+            "listenCount": 16000000,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_27_300_217530992.jpg",
+            "songList": [{
+                "singername": "张杰",
+                "songname": "无药可救"
+            }, {
+                "singername": "鹿晗",
+                "songname": "时间停了"
+            }, {
+                "singername": "张杰",
+                "songname": "做梦"
+            }],
+            "topTitle": "巅峰榜·新歌",
+            "type": 0
+        }, {
+            "id": 55,
+            "listenCount": 9800000,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_55_300_217489132.jpg",
+            "songList": [{
+                "singername": "艾热",
+                "songname": "都是小事儿 (Live)"
+            }, {
+                "singername": "王以太",
+                "songname": "梦魇 (Live)"
+            }, {
+                "singername": "王以太",
+                "songname": "目不转睛 (Live)"
+            }],
+            "topTitle": "江小白YOLO·巅峰榜·中国新说唱",
+            "type": 0
+        }, {
+            "id": 56,
+            "listenCount": 10449150,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_56_300_217473589.jpg",
+            "songList": [{
+                "singername": "康树龙",
+                "songname": "像我这样的人 (Live)"
+            }, {
+                "singername": "宿涵",
+                "songname": "四面楚歌 + 懦夫 + Look At Me Now + 霍元甲 (Live)"
+            }, {
+                "singername": "打包安琪",
+                "songname": "贝加尔湖畔 + Faded (Live)"
+            }],
+            "topTitle": "巅峰榜·2018中国好声音",
+            "type": 0
+        }, {
+            "id": 28,
+            "listenCount": 19700000,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_28_300_202004771.jpg",
+            "songList": [{
+                "singername": "王天戈",
+                "songname": "心安理得"
+            }, {
+                "singername": "虎二",
+                "songname": "一百万个可能"
+            }, {
+                "singername": "叶洛洛",
+                "songname": "小了白了兔"
+            }],
+            "topTitle": "巅峰榜·网络歌曲",
+            "type": 0
+        }, {
+            "id": 5,
+            "listenCount": 3254680,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_5_300_217387073.jpg",
+            "songList": [{
+                "singername": "王俊凯",
+                "songname": "我的"
+            }, {
+                "singername": "王俊凯",
+                "songname": "醒着"
+            }, {
+                "singername": "Sunnee",
+                "songname": "不哭"
+            }],
+            "topTitle": "巅峰榜·内地",
+            "type": 0
+        }, {
+            "id": 6,
+            "listenCount": 3363480,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_6_300_217473651.jpg",
+            "songList": [{
+                "singername": "张韶涵",
+                "songname": "如河"
+            }, {
+                "singername": "G.E.M. 邓紫棋",
+                "songname": "倒数"
+            }, {
+                "singername": "Ella陈嘉桦",
+                "songname": "傀"
+            }],
+            "topTitle": "巅峰榜·港台",
+            "type": 0
+        }, {
+            "id": 3,
+            "listenCount": 9600000,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_3_300_217416534.jpg",
+            "songList": [{
+                "singername": "Avril Lavigne",
+                "songname": "Head Above Water"
+            }, {
+                "singername": "Eminem",
+                "songname": "Killshot (Explicit)"
+            }, {
+                "singername": "Martin Garrix",
+                "songname": "Burn Out"
+            }],
+            "topTitle": "巅峰榜·欧美",
+            "type": 0
+        }, {
+            "id": 16,
+            "listenCount": 6290320,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_16_300_217262128.jpg",
+            "songList": [{
+                "singername": "GOT7 (갓세븐)",
+                "songname": "Lullaby (Korean Ver.)"
+            }, {
+                "singername": "선미 (宣美)",
+                "songname": "사이렌(Siren)"
+            }, {
+                "singername": "마크 (Mark)",
+                "songname": "OMW"
+            }],
+            "topTitle": "巅峰榜·韩国",
+            "type": 0
+        }, {
+            "id": 29,
+            "listenCount": 4706980,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_29_300_217122344.jpg",
+            "songList": [{
+                "singername": "摩登兄弟刘宇宁",
+                "songname": "有多少爱可以重来"
+            }, {
+                "singername": "火箭少女101",
+                "songname": "卡路里"
+            }, {
+                "singername": "薛之谦",
+                "songname": "违背的青春"
+            }],
+            "topTitle": "巅峰榜·影视金曲",
+            "type": 0
+        }, {
+            "id": 17,
+            "listenCount": 1830210,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_17_300_217496696.jpg",
+            "songList": [{
+                "singername": "moumoon (沐月)",
+                "songname": "ひとつだけ、 (唯一、)"
+            }, {
+                "singername": "きゃりーぱみゅぱみゅ (Kyary Pamyu Pamyu)",
+                "songname": "キズナミ (羁绊)"
+            }, {
+                "singername": "GARNiDELiA (ガルニデリア)",
+                "songname": "響喜乱舞"
+            }],
+            "topTitle": "巅峰榜·日本",
+            "type": 0
+        }, {
+            "id": 201,
+            "listenCount": 295743,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_201_300_1487552.jpg",
+            "songList": [{
+                "singername": "火箭少女101",
+                "songname": "Light"
+            }, {
+                "singername": "Sunnee",
+                "songname": "不哭"
+            }, {
+                "singername": "鹿晗",
+                "songname": "时间停了"
+            }],
+            "topTitle": "巅峰榜·MV",
+            "type": 0
+        }, {
+            "id": 52,
+            "listenCount": 1496681,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_52_300_217386789.jpg",
+            "songList": [{
+                "singername": "愚青",
+                "songname": "嘘"
+            }, {
+                "singername": "蒋家驹（蒋蒋）",
+                "songname": "退"
+            }, {
+                "singername": "苏运莹",
+                "songname": "生活倒影"
+            }],
+            "topTitle": "巅峰榜·腾讯音乐人原创榜",
+            "type": 0
+        }, {
+            "id": 36,
+            "listenCount": 2579500,
+            "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_36_300_200732018.jpg",
+            "songList": [{
+                "singername": "胡赟兆",
+                "songname": "啷个哩个啷"
+            }, {
+                "singername": "冯鑫",
+                "songname": "成都"
+            }, {
+                "singername": "武勇",
+                "songname": "一次就好"
+            }],
+            "topTitle": "巅峰榜·K歌金曲",
+            "type": 0
+        }]
+    }
+}

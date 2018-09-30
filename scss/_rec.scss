@@ -1,0 +1,50 @@
+.radios,.hotlists{
+    margin: 14px 0px 10px 10px;
+    .title{
+        color: #000;
+        font-size: 16px;
+        margin-bottom: 11px;
+    }
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        .list-item{
+            flex: 1;
+            flex-basis: 40%;
+            font-size: 14px;
+            margin-right: 10px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            .list-media{
+                position: relative;
+            }
+            .list-title{
+                margin-top: 7px;
+                height: 36px;
+                padding: 0 7px 5px;
+                overflow: hidden;
+                text-overflow: hidden;
+            }
+            position: relative;
+            &:first-child{
+            }
+            .icon{
+                background-repeat: no-repeat;
+                background-size: 24px 60px;
+                background-image: url("../images/icons.png");
+            }
+            .icon-play{
+                height: 24px;
+                bottom: 5px;
+                right: 5px;
+                width: 24px;
+                position: absolute;
+                background-position: 0 0;
+            }
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
