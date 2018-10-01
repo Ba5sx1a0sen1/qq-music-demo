@@ -1,4 +1,26 @@
 (function () {
+        let player = new MusicPlayer(document.querySelector("#player"))
+    document.querySelector('.show-player').addEventListener('click', () => {
+        player.show()
+    })
+
+    onHashChange()
+    addEventListener('hashchange', onHashChange)
+
+    function onHashChange() {
+        let hash = location.hash
+        if (/^#player\?.+/.test(hash)) {
+            let matches = hash.slice(hash.indexOf('?') + 1).match(/(\w+)=([^&]+)/g)
+            let options = matches && matches.reduce((res, cur) => {
+                let arr = cur.split('=')
+                res[arr[0]] = decodeURIComponent(arr[1])
+                return res
+            }, {})
+            player.play(options)
+        } else {
+            player.hide()
+        }
+    }
     fetch("/json/rec.json")
         .then(res => res.json())
         .then(render)
@@ -14,6 +36,7 @@
         lazyload(document.querySelectorAll(".lazyload"))
     }
     let search = new Search(document.querySelector("#search-view"))
+
     function renderSlider(slides) {
         let slidess = slides.map(slide => {
             return {
@@ -56,7 +79,7 @@
             </div>
             `).join('')
     }
-    
+
     function renderTopList(List) {
         document.querySelector("#rank-view .toplist").innerHTML = List.map(item => `
         <li class="top-item">
@@ -72,14 +95,15 @@
             </ul>
         </div>
     </li>`).join("")
-    lazyload(document.querySelectorAll("#rank-view .toplist .lazyload"))
-    function songlist(songs){
-        return songs.map((song,i) => `
+        lazyload(document.querySelectorAll("#rank-view .toplist .lazyload"))
+
+        function songlist(songs) {
+            return songs.map((song, i) => `
         <li class="top-item-song">
             <i class="song-index">${i+1}</i>
             <span class="song-name">${song.songname}</span>- ${song.singername}
         </li>
         `).join("")
-    }
+        }
     }
 })()
