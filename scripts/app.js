@@ -13,7 +13,7 @@
         renderPlayLists(json.data.songList)
         lazyload(document.querySelectorAll(".lazyload"))
     }
-
+    let search = new Search(document.querySelector("#search-view"))
     function renderSlider(slides) {
         let slidess = slides.map(slide => {
             return {
