@@ -1,4 +1,4 @@
-class ProgressBar {
+export class ProgressBar {
     constructor(el, duration, start) {
         this.$el = el
         this.elapsed = 0
@@ -49,12 +49,12 @@ class ProgressBar {
 
     render() {
         this.$el.innerHTML = `
-          <div class="progress-time progress-elapsed"></div>
-            <div class="progress-bar">
-              <div class="progress-bar-progress"></div>
-            </div>
-          <div class="progress-time progress-duration"></div>
-        `
+        <div class="progress-time progress-elapsed"></div>
+          <div class="progress-bar">
+            <div class="progress-bar-progress"></div>
+          </div>
+        <div class="progress-time progress-duration"></div>
+      `
     }
 
     formatTime(seconds) {

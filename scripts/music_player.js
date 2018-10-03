@@ -1,4 +1,16 @@
-class MusicPlayer {
+import {
+    ProgressBar
+} from './progress_bar.js'
+import {
+    LyricsPlayer
+} from './lyrics_player.js'
+import {
+    songUrl,
+    lyricsUrl,
+    albumCoverUrl
+} from './helpers.js'
+
+export class MusicPlayer {
     constructor(el) {
         this.$el = el
         this.$el.addEventListener('click', this)
@@ -68,8 +80,8 @@ class MusicPlayer {
                 this.$el.querySelector('.icon-action').className = 'icon-action icon-play'
             }
 
-            this.songid = options.songid
-            this.$audio.src = songUrl(options.songmid)
+            this.songmid = options.songmid
+            this.$audio.src = songUrl(this.songmid)
             this.fetching = true
             fetch(lyricsUrl(this.songid))
                 .then(res => res.json())

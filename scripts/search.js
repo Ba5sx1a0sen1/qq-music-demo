@@ -1,66 +1,78 @@
-class Search {
+import {
+    searchUrl
+} from './helpers.js'
+
+export class Search {
     constructor(el) {
         this.$el = el
-        this.$input = this.$el.querySelector("#search")
-        this.$input.addEventListener('keyup', this.onInput.bind(this))
-        this.$songs = this.$el.querySelector(".song-list")
-        this.keyword = ''
+        this.$input = this.$el.querySelector('#search')
+        this.$input.addEventListener('keyup', this.onKeyUp.bind(this))
+        this.$songs = this.$el.querySelector('.song-list')
         this.page = 1
+        this.songs = {}
+        this.keyword = ''
         this.perpage = 20
-        this.songs = []
         this.nomore = false
         this.fetching = false
         this.onscroll = this.onScroll.bind(this)
         window.addEventListener('scroll', this.onscroll)
     }
-    onScroll(event) {
-        if (this.nomre) return window.removeEventListener('scroll', this.onscroll)
-        if (document.documentElement.clientHeight + document.documentElement.scrollTop > document.documentElement.scrollHeight - 50) {
-            this.search(this.keyword, this.page + 1)
-        }
-    }
-    onInput(event) {
-        let keyword = event.target.value.trim();
+
+    onKeyUp(event) {
+        let keyword = event.target.value.trim()
         if (!keyword) return this.reset()
         if (event.keyCode !== 13) return
         this.search(keyword)
     }
+
+    onScroll(event) {
+        if (this.nomore) return window.removeEventListener('scroll', this.onscroll)
+        if (pageYOffset + document.documentElement.clientHeight > document.body.scrollHeight - 50) {
+            this.search(this.keyword, this.page + 1)
+        }
+    }
+
     reset() {
         this.page = 1
+        this.songs = {}
         this.keyword = ''
-        this.songs = []
+        this.nomore = false
         this.$songs.innerHTML = ''
     }
+
     search(keyword, page) {
-        if (this.fetching) return
+        if (this.keyword === keyword && this.songs[page || this.page]) return
+        if (this.nomore || this.fetching) return
+        if (this.keyword !== keyword) this.reset()
         this.keyword = keyword
-        this.fetching = true
         this.loading()
-        fetch(`http://localhost:4000/search?keyword=${this.keyword}&page=${page || this.page}`)
+        fetch(searchUrl(this.keyword, page || this.page))
             .then(res => res.json())
-            .then((json) => {
-                this.page = (json.data.song.curpage === 0 ? this.page : json.data.song.curpage) //防止接口返回query error将page置为0
-                this.nomore = (json.message === 'no results')
-                this.songs.push(...json.data.song.list)
+            .then(json => {
+                this.page = json.data.song.curpage
+                this.songs[this.page] = json.data.song.list
+                this.nomore = json.message === 'no results'
                 return json.data.song.list
             })
             .then(songs => this.append(songs))
-            .then(() => this.fetching = false)
+            .then(() => this.done())
             .catch(() => this.fetching = false)
     }
+
     append(songs) {
         let html = songs.map(song => {
-            let artist = song.singer.map(s => s.name).join(' ')//改成songmid，不然无法播放
+            let artist = song.singer.map(s => s.name).join(' ')
             return `
-            <a class="song-item" href="#player?artist=${artist}&songmid=${song.songmid}&songid=${song.songid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}">
-                <i class="icon icon-music"></i>
-                <div class="song-name ellipsis">${song.songname}</div>
-                <div class="song-artist ellipsis">${song.singer.map(s => s.name).join('')}</div>
-            </a>
-        `
-        }).join("")
-        this.$songs.insertAdjacentHTML('beforeEnd', html)
+        <a class="song-item"
+           href="#player?artist=${artist}&songmid=${song.songmid}&songid=${song.songid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}">
+          <i class="icon icon-music"></i>
+          <div class="song-name ellipsis">${song.songname}</div>
+          <div class="song-artist ellipsis">${artist}</div>
+        </a>`
+        }).join('')
+        this.$songs.insertAdjacentHTML('beforeend', html)
     }
+
     loading() {
         this.fetching = true
         this.$el.querySelector('.search-loading').classList.add('show')
@@ -77,4 +89,5 @@ class Search {
             this.$el.querySelector('.search-loading').classList.remove('show')
         }
     }
+
 }
