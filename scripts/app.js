@@ -1,5 +1,5 @@
 (function () {
-        let player = new MusicPlayer(document.querySelector("#player"))
+    let player = new MusicPlayer(document.querySelector("#player"))
     document.querySelector('.show-player').addEventListener('click', () => {
         player.show()
     })
@@ -95,7 +95,7 @@
             </ul>
         </div>
     </li>`).join("")
-        lazyload(document.querySelectorAll("#rank-view .toplist .lazyload"))
+        lazyload(document.querySelectorAll(".lazyload"))
 
         function songlist(songs) {
             return songs.map((song, i) => `

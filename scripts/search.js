@@ -22,7 +22,7 @@ class Search {
     onInput(event) {
         let keyword = event.target.value.trim();
         if (!keyword) return this.reset()
-        if (event.key !== 'Enter') return
+        if (event.keyCode !== 13) return
         this.search(keyword)
     }
     reset() {
@@ -35,6 +35,7 @@ class Search {
         if (this.fetching) return
         this.keyword = keyword
         this.fetching = true
+        this.loading()
         fetch(`http://localhost:4000/search?keyword=${this.keyword}&page=${page || this.page}`)
             .then(res => res.json())
             .then((json) => {
